@@ -7,15 +7,51 @@
 .page-title-span {
   margin-left: 10px;
 }
+#nameBody{
+    margin: 50px;
+    color: black;
+    font-size: 20px;
+}
 
 .button-right-icon {
   margin-left: 10px;
 }
 
+#loginDialog{
+    background: rgba(255,255,255, 0.5);
+}
+
+.mdl-dialog__actions{
+    width: 100%;
+}
+#signupBtn{
+    width: 100%;
+    float: right;
+}
+#loginBtn{
+    width: 100%;
+}
+.mdl-button{
+    background-color: white;
+}
+.mdl-textfield__label{
+    color: black;
+}
+.mdl-textfield__input{
+    color: black;
+}
+.mdl-textfield--floating-label{
+    color: black;
+}
+
 /*Login Section */
 
+
 .login-cover {
-  background: #fff;
+  background: url("players.png");
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
   position: fixed;
   top: 0;
   left: 0;

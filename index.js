@@ -11,6 +11,31 @@ firebase.auth().onAuthStateChanged(function(user) {
     */
     dialog.close();
 
+    var user = firebase.auth().currentUser;
+    var name, email, photoUrl, uid, emailVerified;
+    email = user.email;
+    name = user.displayName;
+    
+    document.getElementById('nameBody').innerHTML = "Hey " + email;
+
+    if(name == null){
+      var x = document.getElementById('noName');
+      x.style.display = "block";
+      var nameEntry = document.getElementById('nameInput').value;
+      user.updateProfile({
+        displayName: nameEntry
+      }).then(function(){
+        document.getElementById('nameBody').innerHTML = "Hey " + email + " we found your name, it's " + nameEntry;
+      });
+    }
+    else{
+      document.getElementById('nameBody').innerHTML = "Hey " + email + " we found your name, it's " + name;
+
+    }
+     document.getElementById('checkName').innerHTML = "Hey " + user.displayName + " !";
+
+
+
   } else {
 
     $(".login-cover").show();
